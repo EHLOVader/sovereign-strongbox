@@ -1,0 +1,52 @@
+dir = roles/common/files/
+appName = APPNAME
+siteName = SITENAME
+env = ENV
+
+[ req ]
+default_bits = 2048
+default_keyfile = ${dir}/wildcard_private.key
+distinguished_name = req_distinguished_name
+req_extensions     = v3_req
+prompt = no
+
+[ req_distinguished_name ]
+C =  #TODO Country ISO 2 Char
+ST = #TODO State Name
+L =  #TODO City Name
+O =  #TODO Organization
+OU = #TODO Organizational Unit
+CN = *.${siteName}
+
+
+[v3_req]
+subjectAltName          = @alt_names
+
+[alt_names]
+DNS.1   = ${siteName}
+
+
+[ req ]
+default_bits        = 2048
+default_keyfile     = privkey.pem
+distinguished_name  = req_distinguished_name
+req_extensions     = v3_req
+
+[ req_distinguished_name ]
+countryName           = Country Name (2 letter code)
+countryName_default   = US
+stateOrProvinceName   = State or Province Name (full name)
+stateOrProvinceName_default = .
+localityName          = Locality Name (eg, city)
+localityName_default  = .
+organizationName          = Organization Name (eg, company)
+organizationName_default  = .
+commonName            = Common Name
+commonName_default = *.ehlovader.com
+commonName_max        = 64
+
+[v3_req]
+subjectAltName          = @alt_names
+
+[alt_names]
+DNS.1   = ehlovader.com

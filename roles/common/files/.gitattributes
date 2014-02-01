@@ -1,0 +1,4 @@
+*.crt merge=ours
+*.cnf merge=ours
+*.pem merge=ours
+*.key merge=ours

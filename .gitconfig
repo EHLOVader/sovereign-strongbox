@@ -1,0 +1,3 @@
+[merge "keep"]
+    name = "Keep ours merge"
+    driver = keep.sh %O %A %B

@@ -1,0 +1,21 @@
+# Vagrant Files
+.vagrant
+package.box
+vagrant_ansible_inventory_default
+
+# Ansible Files
+vagrant_ansible*
+.my.cnf
+.protobox
+
+# Web Files
+index.html
+
+# Sublime Text
+*.sublime*
+
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+
+tests.pyc
